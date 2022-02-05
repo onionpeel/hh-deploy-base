@@ -4,7 +4,7 @@ import { Deployment } from "hardhat-deploy/dist/types";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import type { BasicNFT } from '../typechain-types';
 
-describe('SharedFundingFactory', () => {
+describe('BasicNFT', () => {
   let deployer: string;
   let basicNFT: BasicNFT;
   let accounts: SignerWithAddress[];
