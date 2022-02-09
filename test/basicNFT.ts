@@ -2,16 +2,15 @@ import {expect} from "./chai-setup";
 import {ethers, deployments, getNamedAccounts} from 'hardhat';
 import { Deployment } from "hardhat-deploy/dist/types";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
+import {setup} from './utils/index';
 import type { BasicNFT } from '../typechain-types';
 
-describe('SharedFundingFactory', () => {
-  let deployer: string;
+describe('BasicNFT', () => {
+  let deployer: SignerWithAddress;
   let basicNFT: BasicNFT;
-  let accounts: SignerWithAddress[];
 
   beforeEach(async () => {
-    ({deployer} = await getNamedAccounts()); // provides only addresses, not Signer objects
-    accounts = await ethers.getSigners(); //provides access as Signer objects
+    ({deployer} = await setup());
 
     await deployments.fixture(['basicNFT']);
 
