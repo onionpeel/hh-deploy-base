@@ -13,7 +13,7 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-         version: '0.8.0',
+         version: '0.8.15',
       },
     ]
   },
@@ -59,9 +59,9 @@ const config: HardhatUserConfig = {
     //   tags: ['goerli']
     // },
   },
-  etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY
-  },
+  // etherscan: {
+  //   apiKey: process.env.ETHERSCAN_API_KEY
+  // },
   typechain: {
     outDir: "./typechain-types",
     target: 'ethers-v5',
